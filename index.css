@@ -1,0 +1,292 @@
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.img-fluid {
+    width: 100%;
+}
+
+.container {
+    max-width: 1080px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*Recipe Header*/
+.recipe__header {
+    margin-bottom: 30px;
+}
+
+.recipe__header h1 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.recipe-header__subtitle {
+    display: flex;
+    align-items: start;
+}
+
+.recipe-header__subtitle img {
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
+.recipe-header__subtitle p {
+    width: 60%;
+    font-style: italic;
+}
+
+/*Recipe Banner*/
+.recipe__banner {
+    margin-bottom: 30px;
+}
+
+/*Recipe Main*/
+.recipe__main {
+    flex: 55%;
+    max-width: 55%;
+}
+
+.recipe__main h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+
+.recipe-ingredients__group {
+    margin-bottom: 30px;
+}
+
+.recipe-ingredients__group h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+.recipe-ingredients-group-list__item.checkbox-container {
+    margin-bottom: 20px;
+}
+
+.recipe-instruction-list__item {
+    display: flex;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.recipe-instruction-list-item__index {
+    padding: 0 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #F2994A;
+    font-family: 'Playfair Display', serif;
+    color: #FFF;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.recipe__source {
+    margin-top: 50px;
+}
+
+.recipe__source p {
+    color: #BDBDBD;
+    font-style: italic;
+}
+
+/*Main*/
+main .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+/*Recipe Info*/
+.recipe__info {
+    flex: 20%;
+    max-width: 20%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 40px;
+    padding-bottom: 20px;
+}
+
+.recipe-info__item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.recipe-info__item span {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.recipe-info-item__content h6 {
+    color: #BDBDBD;
+} 
+
+.recipe-info__item.active span {
+    color:#F2994A;
+}
+
+.recipe-info__item.active h5 {
+    color:#F2994A;
+}
+
+/*Footer*/
+footer p {
+    text-align: center;
+    color: #A9A9A9;
+    padding-top: 50px;
+}
+
+/*Checkboxes*/
+/* The container */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #828282;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked~.checkmark {
+    background-color: #F2994A;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .recipe__header h1 {
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 20px;
+        font-size: 1.7rem;
+    }
+    
+    .recipe-header__subtitle p {
+        width: 100%;
+    }
+
+    main .container {
+        flex-direction: column-reverse;
+    }
+
+    .recipe__info {
+        flex: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        box-shadow: none;
+        justify-content: space-between;
+    }
+
+    .recipe-info__item:first-child {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .recipe-info-item__icon span {
+        font-size: 1.6rem;
+    }
+
+    .recipe-info-item__content h5,
+    .recipe-info-item__content h6 {
+        font-size: 0.8rem;
+    }
+
+    .recipe__main {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .recipe__info {
+        flex: 30%;
+        max-width: 30%;
+        padding: 50px;
+        padding-bottom: 20px;
+    }
+}
